@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Book } from './book';
-
+import { Book, Thumbnail } from './book';
+/*BS*/
 @Injectable({
   providedIn: 'root'
-})
+})/*BE*/
 export class BookStoreService {
   books: Book[];
 
@@ -23,24 +23,12 @@ export class BookStoreService {
           title: 'Buchcover'
         }],
         description: 'Mit Angular setzen Sie auf ein modernes und modulares...'
-      },
-      {
-        isbn: '9783864901546',
-        title: 'AngularJS',
-        authors: ['Philipp Tarasiewicz', 'Robin Böhm'],
-        published: new Date(2014, 5, 29),
-        subtitle: 'Eine praktische Einführung',
-        rating: 5,
-        thumbnails: [{
-          url: 'https://ng-buch.de/cover1.jpg',
-          title: 'Buchcover'
-        }],
-        description: 'Dieses Buch führt Sie anhand eines zusammenhängenden Beispielprojekts...'
       }
+      // ggf. weitere Einträge
     ];
   }
-
+/*BS*/
   getAll() {
     return this.books;
-  }
+  }/*BE*/
 }
